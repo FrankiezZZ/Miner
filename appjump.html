@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>appjump</title>
+</head>
+<body>
+    <div id="btn">
+<!--        <button onclick="submitFn()">打开app</button> -->
+        <a>appjump</a>
+<!--        <a href="安卓配置" class="a-btn"  style="display: none">安卓</a>-->
+        <a href="GPUImageDemo://" class="i-btn">apple</a>
+    </div>
+  </body>
+<script src="http://m-cdn.saclub.com.cn/app/2.4/js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript">
+     var ua = navigator.userAgent.toLowerCase();
+     var isWeixin = ua.indexOf('micromessenger') != -1;
+     var isAndroid = ua.indexOf('android') != -1;
+     var isIos = (ua.indexOf('iphone') != -1) || (ua.indexOf('ipad') != -1);
+     var d = new Date();
+     var t0 = d.getTime();
+    });
+    //跳转下载
+    $(".i-btn").click(function(){
+         //苹果
+         openApp("https://itunes.apple.com/cn/app/foos-bian-cheng-shi-he5sui/id923441570?mt=8");
+    });
+    function openApp(src) {
+    // 通过iframe的方式试图打开APP，如果能正常打开，会直接切换到APP，并自动阻止a标签的默认行为
+    // 否则打开a标签的href链接
+         var delay = setInterval(function(){
+             var d = new Date();
+             var t1 = d.getTime();
+             if( t1-t0<3000 && t1-t0>2000){
+                alert('请下载APP');
+                 window.location.href =src;
+             }
+             if(t1-t0>=3000){
+                  clearInterval(delay);
+             }
+        },2000);
+    }
+</html>>
