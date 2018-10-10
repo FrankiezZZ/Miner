@@ -3,11 +3,21 @@
 <head>
     <title>appjump</title>
 </head>
-<script type="text/javascript">
+
+<body>
+    <div id="btn">
+        <a >appjump</a>
+        <button onclick="submitFn()">apple app</button>
+    </div>
+  </body>
+      <script type="text/javascript">
+     
+
      function submitFn(){
+     	 console.log("代码执行");
         //判断浏览器
         var u = navigator.userAgent;
-        if(/MicroMessenger/gi.test(u) {
+        if(/MicroMessenger/gi.test(u)) {
            // 引导用户在浏览器中打开
             alert('请在浏览器中打开');
             return;
@@ -64,10 +74,4 @@ function openApp(src) {
      },2000);
 }
 </script>
-<body>
-    <div id="btn">
-        <a>appjump</a>
-        <button onclick="submitFn()">apple</button>
-    </div>
-  </body>
 </html>
