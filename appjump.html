@@ -3,18 +3,17 @@
 <head>
     <title>appjump</title>
 </head>
-    <script src="http://m-cdn.saclub.com.cn/app/2.4/js/jquery-1.11.3.min.js">
     <script type="text/javascript">
      function submitFn(){
-    //判断浏览器
-    var u = navigator.userAgent;
-    if(/MicroMessenger/gi.test(u) {
-       // 引导用户在浏览器中打开
-        alert('请在浏览器中打开');
-        return;
-    }
-    var d = new Date();
-    var t0 = d.getTime();
+        //判断浏览器
+        var u = navigator.userAgent;
+        if(/MicroMessenger/gi.test(u) {
+           // 引导用户在浏览器中打开
+            alert('请在浏览器中打开');
+            return;
+        }
+        var d = new Date();
+        var t0 = d.getTime();
     if(u.indexOf('Android') > -1 || u.indexOf('Linux') > -1){
         //Android
         if(openApp('GPUImageDemo://')){
@@ -71,4 +70,4 @@ function openApp(src) {
         <button onclick="submitFn()">apple</button>
     </div>
   </body>
-</html>>
+</html>
