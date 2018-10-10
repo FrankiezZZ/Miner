@@ -5,9 +5,7 @@
 </head>
 <body>
     <div id="btn">
-<!--        <button onclick="submitFn()">打开app</button> -->
         <a>appjump</a>
-<!--        <a href="安卓配置" class="a-btn"  style="display: none">安卓</a>-->
         <a onclick="submitFn" class="i-btn"><button>apple</button></a>
     </div>
   </body>
@@ -25,8 +23,8 @@
     var t0 = d.getTime();
     if(u.indexOf('Android') > -1 || u.indexOf('Linux') > -1){
         //Android
-        if(openApp('en://startapp')){
-         openApp('en://startapp');
+        if(openApp('GPUImageDemo://')){
+         openApp('GPUImageDemo://');
         }else{
             //由于打开需要1～2秒，利用这个时间差来处理－－打开app后，返回h5页面会出现页面变成app下载页面，影响用户体验
             var delay = setInterval(function(){
@@ -34,7 +32,7 @@
                  var t1 = d.getTime();
                  if( t1-t0<3000 && t1-t0>2000){
                     alert('请下载APP');
-                     window.location.href = "app下载地址";
+                     window.location.href = "https://itunes.apple.com/cn/app/foos-bian-cheng-shi-he5sui/id923441570?mt=8";
                  }
                  if(t1-t0>=3000){
                       clearInterval(delay);
@@ -51,7 +49,7 @@
                 var t1 = d.getTime();
                 if( t1-t0<3000 && t1-t0>2000){
                     alert('请下载APP');
-                    window.location.href = "app下载地址";
+                    window.location.href = "https://itunes.apple.com/cn/app/foos-bian-cheng-shi-he5sui/id923441570?mt=8";
                 }
                 if(t1-t0>=3000){
                     clearInterval(delay);
